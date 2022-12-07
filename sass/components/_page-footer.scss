@@ -1,0 +1,110 @@
+// Footer
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-bg-color;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+// Address list
+
+.address {
+  margin-top: 20px;
+  width: 231px;
+
+  &__link,
+  &__map {
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.address {
+  &__link {
+    margin-top: 9px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__map {
+    color: $white-title-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+// SOCIAL LIST
+
+.social-net {
+  margin-left: 70px;
+  width: 206px;
+}
+
+.social-net__title,
+.subscribe__title {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-title-color;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+// SUBSCRIBE
+
+.subscribe {
+  margin-left: 93px;
+
+  &__form {
+    display: flex;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    fill: $white-color;
+  }
+}
+
+.subscribe__mail {
+  padding: 15px 16px;
+  margin-right: 12px;
+  min-width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: border $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
