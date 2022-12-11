@@ -1,22 +1,84 @@
 .hero {
   padding-top: 118px;
-  // padding-top: 200px;
   padding-bottom: 118px;
-  // padding-bottom: 200px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $white-title-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $hero-bg;
+
+  // phone screen
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/header-bg.jpg);
+    url(../images/header/Img-phone@1x.jpg);
 
-  background-color: $hero-bg;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: $white-title-color;
+  // retina mobile screen
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/header/Img-phone@2x.jpg);
+  }
+
+  // Tablet screen
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/header/img-tablet@1x.jpg);
+
+    // retina tablet screen
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/header/img-tablet@2x.jpg);
+    }
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/header/img-desk@1x.jpg);
+
+    // retina desktop screen
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/header/img-desk@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
@@ -24,8 +86,11 @@
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
-  // font-size: 44px;
-  line-height: 1.62;
-  // line-height: 1.36;
+  line-height: 1.62; 
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

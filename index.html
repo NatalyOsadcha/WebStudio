@@ -26,6 +26,11 @@
         <a href="./index.html" class="header__logo logo"
           ><span class="logo__accent">Web</span>Studio</a
         >
+        <button class="menu__toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu__open" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
         <div class="menu__wrapper">
           <nav class="nav">
             <ul class="nav__list">
@@ -177,10 +182,19 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/photo1.jpg"
+                srcset="
+                  ./images/team/img-1ph@1x.jpg 450w,
+                  ./images/team/img-1ph@2x.jpg 900w,
+                  ./images/team/img-1tb@1x.jpg 354w,
+                  ./images/team/img-1tb@2x.jpg 708w,
+                  ./images/team/img-1dt@1x.jpg 270w,
+                  ./images/team/img-1dt@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img-1ph@1x.jpg"
                 alt="Фото дизайнера"
-                width="270"
-                height="auto"
+                width="450"
+                height="460"
               />
               <div class="team__card">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
@@ -237,10 +251,19 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/photo2.jpg"
+                srcset="
+                  ./images/team/img-2ph@1x.jpg 450w,
+                  ./images/team/img-2ph@2x.jpg 900w,
+                  ./images/team/img-2tb@1x.jpg 354w,
+                  ./images/team/img-2tb@2x.jpg 708w,
+                  ./images/team/img-2dt@1x.jpg 270w,
+                  ./images/team/img-2dt@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img-2ph@1x.jpg"
                 alt="Фото розробника"
-                width="270"
-                height="auto"
+                width="450"
+                height="460"
               />
               <div class="team__card">
                 <h3 class="team__name">Ольга Рєпіна</h3>
@@ -297,10 +320,19 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/photo3.jpg"
+                srcset="
+                  ./images/team/img-3ph@1x.jpg 450w,
+                  ./images/team/img-3ph@2x.jpg 900w,
+                  ./images/team/img-3tb@1x.jpg 354w,
+                  ./images/team/img-3tb@2x.jpg 708w,
+                  ./images/team/img-3dt@1x.jpg 270w,
+                  ./images/team/img-3dt@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img-3ph@1x.jpg"
                 alt="Фото маркетолога"
-                width="270"
-                height="auto"
+                width="450"
+                height="460"
               />
               <div class="team__card">
                 <h3 class="team__name">Микола Тарасов</h3>
@@ -357,10 +389,19 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/photo4.jpg"
+                srcset="
+                  ./images/team/img-4ph@1x.jpg 450w,
+                  ./images/team/img-4ph@2x.jpg 900w,
+                  ./images/team/img-4tb@1x.jpg 354w,
+                  ./images/team/img-4tb@2x.jpg 708w,
+                  ./images/team/img-4dt@1x.jpg 270w,
+                  ./images/team/img-4dt@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/img-4ph@1x.jpg"
                 alt="Фото вебдизайнера"
-                width="270"
-                height="auto"
+                width="450"
+                height="460"
               />
               <div class="team__card">
                 <h3 class="team__name">Михайло Єрмаков</h3>
@@ -502,7 +543,7 @@
     <!--Футер-->
     <footer class="footer">
       <div class="container footer__container">
-        <div>
+        <div class="address__wrapper">
           <a href="./index.html" class="footer__logo logo"
             ><span class="logo__accent">Web</span>Studio</a
           >
@@ -593,10 +634,10 @@
             <div class="subscribe__wrapper">
               <button class="subscribe__button button" type="submit">
                 Підписатися
+                <svg class="subscribe__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
               </button>
-              <svg class="subscribe__icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
             </div>
           </form>
         </div>
@@ -692,6 +733,25 @@
         </form>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu__close" fill="currentColor" width="18.67" height="18.67">
+          <use href=" ./images/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">Студія</a></li>
+        <li><a href="" class="link">Портфоліо</a></li>
+        <li><a href="" class="link">Контакти</a></li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
