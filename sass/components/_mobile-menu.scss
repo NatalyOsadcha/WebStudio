@@ -89,9 +89,11 @@ font-weight: 500;
 
 .mobile-socials {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .mobile-socials__item {
-  padding: 0 10px;
+  padding-right: 10px;
   border-right: 1px solid $secondary-text-color;
 
   &:last-child {
