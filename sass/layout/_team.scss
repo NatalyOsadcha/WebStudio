@@ -11,9 +11,8 @@
       flex-wrap: wrap;
       gap: 30px;
     }
-    
   }
-  } 
+}
 
 .team__item {
   background: $primary-bg-color;
@@ -21,8 +20,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
- 
-
 
 .team {
   &__card {
@@ -31,9 +28,10 @@
     padding-left: 32px;
     padding-right: 32px;
 
-@media screen and (min-width: 1200px) {
-    padding-bottom: 30px;
-  } }
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 30px;
+    }
+  }
 
   &__name {
     margin-top: 0;
@@ -49,4 +47,15 @@
     font-size: 16px;
     line-height: 1.19;
   }
-}  
+}
+
+.team__photo {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 374;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+  }
+}

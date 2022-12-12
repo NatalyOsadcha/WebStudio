@@ -3,15 +3,22 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $secondary-bg-color;
-  
 
   &__container {
     text-align: center;
-    @media screen and (min-width:1200px)
-    { display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: baseline;
     }
-   
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-left: 76px;
+      padding-right: 89px;
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 }
 
@@ -19,10 +26,15 @@
 
 .address {
   margin-top: 20px;
-  // width: 231px;
-&__wrapper {
-  margin-bottom: 60px;
-}
+  &__wrapper {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: auto;
+    }
+  }
   &__link,
   &__map {
     font-style: normal;
@@ -39,7 +51,7 @@
 }
 
 .address {
-  &__link {  
+  &__link {
     color: rgba(255, 255, 255, 0.6);
   }
 
@@ -49,18 +61,18 @@
 
   &__item:not(:last-child) {
     margin-bottom: 8px;
-    @media screen and (min-width:1200px) {
-        margin-top: 9px;
-      }
+    @media screen and (min-width: 1200px) {
+      margin-top: 9px;
+    }
   }
 }
 
 // SOCIAL LIST
 
 .social-net {
-  margin-bottom: 60px;
-  // margin-left: 70px;
-  // width: 206px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .social-net__title,
@@ -77,22 +89,19 @@
 // SUBSCRIBE
 
 .subscribe {
-  @media screen and (min-width:1200px) {
-  margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
 
-  &__form {
-    display: flex;
-    }}
-
-  // &__wrapper {
-  //   position: relative;
-  // }
+    &__form {
+      display: flex;
+    }
+  }
 
   &__icon {
     position: absolute;
     top: 50%;
     right: 28px;
-    
+
     transform: translateY(-50%);
     fill: $white-color;
   }
@@ -101,9 +110,7 @@
 .subscribe__mail {
   padding: 15px 16px;
   margin-bottom: 20px;
-  // margin-right: 12px;
   width: 100%;
-  // min-width: 358px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -120,5 +127,13 @@
   &:hover,
   &:focus {
     border: 1px solid $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
   }
 }

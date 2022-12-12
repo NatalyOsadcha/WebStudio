@@ -1,24 +1,27 @@
 /* Logo */
 .logo {
+  display: block;
   font-family: $secondary-font;
   font-weight: 700;
   font-size: 24px;
-  // font-size: 26px;
   line-height: 1.17;
-  // line-height: 1.19;
   letter-spacing: 0.03em;
-  
+
   &__accent {
     color: $accent-color;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
 .header__logo {
- 
-  // margin-right: 93px;
-  // padding-top: 24px;
-  // padding-bottom: 25px;
   color: $logo-black-color;
+  @media screen and (min-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .footer__logo {
