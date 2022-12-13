@@ -149,7 +149,8 @@
                 class="project__img"
                 srcset="
                   ./images/project/img-1dt@1x.jpg 370w,
-                  ./images/project/img-1dt@2x.jpg 740w"
+                  ./images/project/img-1dt@2x.jpg 740w
+                "
                 sizes="(min-width: 1200px) 270px"
                 src="./images/project/img-1dt@1x.jpg"
                 alt="Людина працює за комп'ютером"
@@ -161,11 +162,12 @@
             <li class="project__item">
               <img
                 class="project__img"
-                 srcset="
+                srcset="
                   ./images/project/img-2dt@1x.jpg 370w,
-                  ./images/project/img-2dt@2x.jpg 740w"
+                  ./images/project/img-2dt@2x.jpg 740w
+                "
                 sizes="(min-width: 1200px) 270px"
-                                src="./images/project/img-2dt@1x.jpg"
+                src="./images/project/img-2dt@1x.jpg"
                 alt="Людина сидить перед комп'ютером тримає в руках телефон"
                 width="370"
                 height="294"
@@ -177,7 +179,8 @@
                 class="project__img"
                 srcset="
                   ./images/project/img-3dt@1x.jpg 370w,
-                  ./images/project/img-3dt@2x.jpg 740w"
+                  ./images/project/img-3dt@2x.jpg 740w
+                "
                 sizes="(min-width: 1200px) 270px"
                 src="./images/project/img-3dt@1x.jpg"
                 alt="Людина тримає в руках планшет з зображенням шестикутника"
@@ -752,71 +755,84 @@
 
     <!-- Mobile menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu__toggle js-close-menu">
-        <svg
-          class="menu__close"
-          fill="currentColor"
-          width="18.67"
-          height="18.67"
-        >
-          <use href=" ./images/icons.svg#icon-menu-close"></use>
-        </svg>
-      </button>
+      <div class="menu-container__wrapper">
+        <button class="menu__toggle js-close-menu">
+          <svg
+            class="menu__close"
+            fill="currentColor"
+            width="18.67"
+            height="18.67"
+          >
+            <use href=" ./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
 
-      <ul class="mobile-menu">
-        <li class="mobile-menu__item"><a href="#" class="link mobile-menu__link current">Студія</a></li>
-        <li class="mobile-menu__item"><a href="./portfolio.html" class="link mobile-menu__link">Портфоліо</a></li>
-        <li class="mobile-menu__item"><a href="#" class="link mobile-menu__link">Контакти</a></li>
-      </ul>
-      <ul class="mobile-contacts">
-        <li class="mobile-contacts__item">
-          <a href="tel:+380961111111" class="link mobile-contacts__tel"
-            >+38 096 111 11 11</a>
-        </li>
-        <li class="mobile-contacts__item">
-          <a href="mailto:info@devstudio.com" class="link mobile-contacts__mail"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
-      <ul class="mobile-socials">
-        <li class="mobile-socials__item">
-          <a
-            class="mobile-socials__link link"
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Instagram</a
-          >
-        </li>
-        <li class="mobile-socials__item">
-          <a
-            class="mobile-socials__link link"
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-           >Twitter</a
-          >
-        </li>
-        <li class="mobile-socials__item">
-          <a
-            class="mobile-socials__link link"
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Facebook</a
-          >
-        </li>
-        <li class="mobile-socials__item">
-          <a
-            class="mobile-socials__link link"
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            >Linkedin</a
-          >
-        </li>
-      </ul>
+        <ul class="mobile-menu">
+          <li class="mobile-menu__item">
+            <a href="#" class="link mobile-menu__link current">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="link mobile-menu__link"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="link mobile-menu__link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="mobile-contacts">
+          <li class="mobile-contacts__item">
+            <a href="tel:+380961111111" class="link mobile-contacts__tel"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contacts__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="link mobile-contacts__mail"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link link"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link link"
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Facebook</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="mobile-socials__link link"
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
